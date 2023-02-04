@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    <style>
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: #616161;
+        background-image: url("./img/12.jpeg");
+        background-size: 490px;
+    }
+
+    h1{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 1.5em;
+        font-family: 'Times New Roman', Times, serif;
+        color: #dfdfdf;
+    }
+    
+    .box{
+        width: 80vw;
+        height: 100px;
+        background-color: rgb(117, 117, 117);
+        margin: 30vh auto;
+        border-radius: 10px;
+        border: solid ;
+        
+    }
+
+    #senha{
+        height: 25px;
+        width: 200px;
+        margin-left: 30px;
+        margin-top: 15px;
+        border-radius: 4px;
+        border: 0;
+    }
+
+    .inputs{
+        height: 70%;
+        display: flex;
+    }
+
+    button.btn{
+        margin-left: 5px;
+        margin-top: 15px;
+        width: 40px;
+        height: 25px;
+        border: none;
+        border-radius: 4px;
+    }
+
+
+    button img{
+        width: 20px;
+        height: 20px;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <h1>Insira a senha</h1>
+        <div class="inputs">
+            <input type="password" placeholder="Senha" id="senha">
+            <button class="btn" type="button" onclick="logar()">
+                        <img src="./img/iconePesquisa.png" alt="Icone de Pesquisa">
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        var senha = "";
+        function logar(){
+            senha = document.getElementById('senha').value;
+        
+
+            if(senha == "090322"){
+                location.href = "home.html";
+            }else{
+                alert("Senha Incorreta!");
+            }
+        }
+    </script>
+</body>
+</html>
